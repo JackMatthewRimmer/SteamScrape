@@ -12,7 +12,7 @@ def get_data():
     # scrapes the url for all steam sales
     soup = BeautifulSoup(html_doc.content, 'html.parser') 
     search_results_rows = soup.find('div', {"id": "search_resultsRows"})
-    href = search_resultsRows.find_all(href = True)
+    href = search_results_rows.find_all(href = True)
 
     # searches the href tag and finds the title, image, and discounts on all items in the sale
     for item in href:
